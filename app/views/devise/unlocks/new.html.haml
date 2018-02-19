@@ -1,0 +1,18 @@
+= render 'layouts/head_devise'
+
+%body.devise
+  = render 'layouts/alerts'
+
+	%section.container
+		.devise-content
+      %h2.devise-title Resend instructions to unlock
+
+      = form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f|
+        .devise-field
+          = f.label :email
+          = f.email_field :email, autofocus: true
+
+        .devise-submit
+          = f.submit 'Resend', class: 'devise-btn'
+
+      = render "devise/shared/links"

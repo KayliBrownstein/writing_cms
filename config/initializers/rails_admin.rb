@@ -1,7 +1,7 @@
 RailsAdmin.config do |config|
 
   ################  Global configuration  ################
-  config.main_app_name = ['Skeleton']
+  config.main_app_name = ['Writing-CMS']
   config.default_items_per_page = 20
   config.compact_show_view = false
 

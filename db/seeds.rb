@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.new({
-  :email => "admin@admin.com",
-  :password => "12345678",
-  :password_confirmation => "12345678",
-  :admin => true
+  email: "admin@admin.com",
+  password: "12345678",
+  password_confirmation: "12345678",
+  admin: true
 }).save

@@ -1,0 +1,5 @@
+-flash.each do |key, value|
+	- if key != 'success' && key != 'danger' && key != 'notice'
+		- key = 'danger'
+	.alert-message.alert-message
+		= value.html_safe

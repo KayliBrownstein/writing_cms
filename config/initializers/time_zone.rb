@@ -1,5 +1,5 @@
 Rails.env.on(:any) do
   # Configuration default for time zone
-  config.time_zone = 'Brasilia'
-  config.i18n.default_locale = :'pt-BR'
+  config.time_zone = 'Eastern Time (US & Canada)'
+  config.i18n.default_locale = :en
 end

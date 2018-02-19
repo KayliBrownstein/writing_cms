@@ -1,0 +1,21 @@
+= render 'layouts/head_devise'
+
+%body.devise
+  = render 'layouts/alerts'
+
+	%section.container
+		.devise-content
+			%h2.devise-title Resend verification instructions
+
+			= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+			  = devise_error_messages!
+
+			  .devise-field
+			  	= f.label :email, 'E-mail'
+			  	= f.email_field :email, autofocus: true, required: true
+
+			  .devise-submit
+			  	= f.submit 'Reenviar', class: 'devise-btn'
+
+		.devise-links
+			= render 'devise/shared/links'

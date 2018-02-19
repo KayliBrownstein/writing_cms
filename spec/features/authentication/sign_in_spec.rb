@@ -5,11 +5,11 @@ feature 'Sign in' do
 
   scenario 'with valid credentials' do
     sign_in user
-    expect(page).to have_content('Login efetuado com sucesso.')
+    expect(page).to have_content('Signed in successfully.')
   end
 
   scenario 'with invalid credentials' do
     sign_in user, password: 'wrongpassword'
-    expect(page).to have_content('Email ou senha inválidos.')
+    expect(page).to have_content('Invalid Email or password.')
   end
 end
